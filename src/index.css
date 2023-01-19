@@ -1,0 +1,70 @@
+/* 
+================
+FONTS 
+================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* 
+================
+VARIABLES
+================
+*/
+
+/* Monochromatic colors: change lightness and sometimes reduce saturation but never 
+change hue. Primary color to be 100% saturated */
+:root {
+  --clr-primary-blue: hsl(202, 100%, 60%);
+  --clr-dark-blue: hsl(202, 100%, 40%);
+  --clr-light-grey: hsl(202, 5%, 95%);
+  --clr-dark-grey: hsl(202, 5%, 90%);
+  --clr-darker-grey: hsl(202, 5%, 87%);
+  --clr-darkest-grey: hsl(202, 5%, 60%);
+  --clr-primary-black: hsl(202, 100%, 5%);
+  --clr-primary-white: hsl(202, 100%, 100%);
+
+  /* margins */
+
+  --margin-xs: 0.15rem;
+  --margin-sm: 0.6rem;
+  --margin-m: 0.75rem;
+  --margin-l: 1rem;
+  --margin-xl: 2rem;
+
+  /* font-sizes */
+
+  --font-size-m: 1rem;
+}
+
+/* 
+================
+GLOBAL STYLES
+================
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-primary-white);
+  color: var(--clr-primary-black);
+  /* this prevents the app from moving when vertical scrollbar appears: */
+  overflow-x: hidden;
+  width: 100vw;
+  margin-right: calc(100vw - 100%);
+  margin-bottom: 1rem;
+
+  /*this defines what 1 rem is.
+  Default browser font size is 16px
+	by using rem we will make the entire layout of the webpage dependent on the font-size.
+  We can now simply change the font size 	and all the measurements in rem will scale up or down accordingly. 
+	100% = 16px
+  */
+  font-size: 100%;
+}
